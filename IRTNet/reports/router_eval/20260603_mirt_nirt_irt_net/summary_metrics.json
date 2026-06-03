@@ -1,0 +1,42 @@
+[
+  {
+    "bce": 0.5586795210838318,
+    "accuracy": 0.7164702380952381,
+    "rmse": 0.4353808954898275,
+    "mae": 0.38015037775039673,
+    "label_mean": 0.40519046783447266,
+    "pred_mean": 0.4115249216556549,
+    "auc": 0.7651831518165697,
+    "router": "mirt",
+    "route_accuracy": 0.671,
+    "oracle_route_accuracy": 0.9779999852180481,
+    "num_test_rows": 336000,
+    "num_test_prompts": 3000,
+    "prediction_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/mirt_test_predictions.csv",
+    "selected_routes_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/mirt_selected_routes.csv",
+    "per_category_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/mirt_per_category.csv",
+    "best_epoch": 6,
+    "checkpoint_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/mirt_best.pth",
+    "epoch_history_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/mirt_epoch_history.csv"
+  },
+  {
+    "bce": 0.5569190979003906,
+    "accuracy": 0.716125,
+    "rmse": 0.43485406762622447,
+    "mae": 0.3737874925136566,
+    "label_mean": 0.40519046783447266,
+    "pred_mean": 0.3956499397754669,
+    "auc": 0.7662122832821756,
+    "router": "nirt",
+    "route_accuracy": 0.64,
+    "oracle_route_accuracy": 0.9779999852180481,
+    "num_test_rows": 336000,
+    "num_test_prompts": 3000,
+    "prediction_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/nirt_test_predictions.csv",
+    "selected_routes_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/nirt_selected_routes.csv",
+    "per_category_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/nirt_per_category.csv",
+    "best_epoch": 5,
+    "checkpoint_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/nirt_best.pth",
+    "epoch_history_path": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net/nirt_epoch_history.csv"
+  }
+]

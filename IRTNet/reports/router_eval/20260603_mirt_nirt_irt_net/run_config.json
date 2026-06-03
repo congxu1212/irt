@@ -1,0 +1,21 @@
+{
+  "train_data_path": "/Users/cxu7/Documents/IRTNet/IRTNet/data/train.csv",
+  "test_data_path": "/Users/cxu7/Documents/IRTNet/IRTNet/data/test.csv",
+  "question_embedding_path": "/Users/cxu7/Documents/IRTNet/IRTNet/data/question_embeddings.pth",
+  "output_dir": "/Users/cxu7/Documents/IRTNet/IRTNet/reports/router_eval/20260603_mirt_nirt_irt_net",
+  "routers": [
+    "mirt",
+    "nirt"
+  ],
+  "mirt_epochs": 9,
+  "nirt_epochs": 5,
+  "batch_size": 8192,
+  "eval_batch_size": 16384,
+  "lr": 0.001,
+  "latent_dim": 80,
+  "num_models": 112,
+  "num_categories": 80,
+  "prompt_embedding_dim": 768,
+  "device": "mps",
+  "seed": 42
+}

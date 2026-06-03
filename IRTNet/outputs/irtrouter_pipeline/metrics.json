@@ -1,0 +1,447 @@
+{
+  "config": {
+    "router_root": "../IRT-Router",
+    "output_dir": "outputs/irtrouter_pipeline",
+    "device": "mps",
+    "embedding_device": "auto",
+    "seed": 42,
+    "val_fraction": 0.1,
+    "embedding_source": "irtrouter-bert",
+    "embedding_model": "all-mpnet-base-v2",
+    "embedding_batch_size": 128,
+    "force_embeddings": false,
+    "prepare_only": false,
+    "eval_only": false,
+    "epochs": 5,
+    "batch_size": 4096,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "model_embed_dim": 128,
+    "num_experts": 8,
+    "top_k_experts": 2,
+    "expert_hidden_dim": 256,
+    "shared_expert_hidden_dim": 256,
+    "expert_output_dim": 128,
+    "dropout_rate": 0.2,
+    "embedding_noise": 0.02,
+    "bias_update_speed": 0.01,
+    "early_stopping_patience": 2,
+    "label_threshold": 0.5
+  },
+  "data_summary": {
+    "router_root": "/Users/cxu7/Documents/IRTNet/IRT-Router",
+    "prepared_dir": "/Users/cxu7/Documents/IRTNet/IRTNet/outputs/irtrouter_pipeline/prepared",
+    "generated_at": "2026-06-03T19:11:05.648436+00:00",
+    "val_fraction": 0.1,
+    "unique_questions": 38031,
+    "train_rows": 439760,
+    "val_rows": 48840,
+    "test1_rows": 209406,
+    "test2_rows": 63200,
+    "train_prompts": 21973,
+    "val_prompts": 2441,
+    "test1_prompts": 10467,
+    "test2_prompts": 3159,
+    "all_models": [
+      "deepseek_chat",
+      "deepseek_coder",
+      "gemini15_flash",
+      "glm_4_air",
+      "glm_4_flash",
+      "glm_4_plus",
+      "gpt_4o",
+      "gpt_4o_mini",
+      "gpt_4o_mini_cot",
+      "llama31_405b_instruct",
+      "llama31_70b_instruct",
+      "llama31_8b_instruct",
+      "ministral_8b_instruct_2410",
+      "mistral_7b_instruct_v02",
+      "mixtral_8x7b_instruct",
+      "moonshot_v1_search",
+      "qwen25_32b_int4",
+      "qwen25_72b_instruct",
+      "qwen25_7b_instruct",
+      "qwen25_math_7b_instruct",
+      "qwq_32b_preview"
+    ],
+    "tasks": [
+      "aclue",
+      "arc_c",
+      "ceval",
+      "cmmlu",
+      "commonsense_qa",
+      "gsm8k",
+      "hotpot_qa",
+      "humaneval",
+      "math",
+      "mbpp",
+      "mmlu",
+      "squad"
+    ]
+  },
+  "embedding_path": "/Users/cxu7/Documents/IRTNet/IRTNet/outputs/irtrouter_pipeline/prepared/question_embeddings.pth",
+  "embedding_shape": [
+    38031,
+    768
+  ],
+  "model_coverage": {
+    "test1": {
+      "models": [
+        "deepseek_chat",
+        "deepseek_coder",
+        "gemini15_flash",
+        "glm_4_air",
+        "glm_4_flash",
+        "glm_4_plus",
+        "gpt_4o",
+        "gpt_4o_mini",
+        "gpt_4o_mini_cot",
+        "llama31_405b_instruct",
+        "llama31_70b_instruct",
+        "llama31_8b_instruct",
+        "ministral_8b_instruct_2410",
+        "mistral_7b_instruct_v02",
+        "mixtral_8x7b_instruct",
+        "moonshot_v1_search",
+        "qwen25_32b_int4",
+        "qwen25_72b_instruct",
+        "qwen25_7b_instruct",
+        "qwen25_math_7b_instruct",
+        "qwq_32b_preview"
+      ],
+      "unseen_models": [
+        "moonshot_v1_search"
+      ]
+    },
+    "test2": {
+      "models": [
+        "deepseek_chat",
+        "deepseek_coder",
+        "gemini15_flash",
+        "glm_4_air",
+        "glm_4_flash",
+        "glm_4_plus",
+        "gpt_4o",
+        "gpt_4o_mini",
+        "gpt_4o_mini_cot",
+        "llama31_405b_instruct",
+        "llama31_70b_instruct",
+        "llama31_8b_instruct",
+        "ministral_8b_instruct_2410",
+        "mistral_7b_instruct_v02",
+        "mixtral_8x7b_instruct",
+        "qwen25_32b_int4",
+        "qwen25_72b_instruct",
+        "qwen25_7b_instruct",
+        "qwen25_math_7b_instruct",
+        "qwq_32b_preview"
+      ],
+      "unseen_models": []
+    }
+  },
+  "best_epoch": 5,
+  "best_val_bce": 0.5109813293407044,
+  "history": [
+    {
+      "epoch": 1,
+      "train_bce": 0.5649484596036446,
+      "val_bce": 0.5423719276471962,
+      "val_threshold_accuracy": 0.7331490581490582,
+      "val_mae": 0.3571940585492037,
+      "val_rmse": 0.4197390025899673,
+      "lr": 0.0003
+    },
+    {
+      "epoch": 2,
+      "train_bce": 0.5364720849984772,
+      "val_bce": 0.5233156896242833,
+      "val_threshold_accuracy": 0.7457411957411958,
+      "val_mae": 0.34894045222909953,
+      "val_rmse": 0.4099996415850666,
+      "lr": 0.0003
+    },
+    {
+      "epoch": 3,
+      "train_bce": 0.5289137550174094,
+      "val_bce": 0.5182393791829827,
+      "val_threshold_accuracy": 0.7504504504504504,
+      "val_mae": 0.3410705280376255,
+      "val_rmse": 0.4077852756306376,
+      "lr": 0.0003
+    },
+    {
+      "epoch": 4,
+      "train_bce": 0.5246704487100566,
+      "val_bce": 0.513032325538429,
+      "val_threshold_accuracy": 0.7546887796887797,
+      "val_mae": 0.3399477629642227,
+      "val_rmse": 0.4052511231612162,
+      "lr": 0.0003
+    },
+    {
+      "epoch": 5,
+      "train_bce": 0.5215927750864353,
+      "val_bce": 0.5109813293407044,
+      "val_threshold_accuracy": 0.7553235053235053,
+      "val_mae": 0.3369132388963892,
+      "val_rmse": 0.4043970580726353,
+      "lr": 0.0003
+    }
+  ],
+  "model_path": "/Users/cxu7/Documents/IRTNet/IRTNet/outputs/irtrouter_pipeline/best_irt_router.pt",
+  "tests": {
+    "test1": {
+      "row_metrics": {
+        "rows": 209406,
+        "positive_rate_at_threshold": 0.6100923564749816,
+        "threshold_accuracy": 0.7568264519641271,
+        "mae": 0.3365177995975412,
+        "rmse": 0.40438171053017413,
+        "roc_auc": 0.8059898355567984,
+        "bce": 0.510693260217573
+      },
+      "row_metrics_by_task": {
+        "aclue": {
+          "rows": 12000,
+          "positive_rate_at_threshold": 0.4890833333333333,
+          "threshold_accuracy": 0.64175,
+          "mae": 0.41817182567639855,
+          "rmse": 0.47857354961380155,
+          "roc_auc": 0.7011125497907489
+        },
+        "arc_c": {
+          "rows": 12000,
+          "positive_rate_at_threshold": 0.7718333333333334,
+          "threshold_accuracy": 0.8934166666666666,
+          "mae": 0.22594911451724836,
+          "rmse": 0.3004624667697959,
+          "roc_auc": 0.8934353853465364
+        },
+        "cmmlu": {
+          "rows": 60000,
+          "positive_rate_at_threshold": 0.6283666666666666,
+          "threshold_accuracy": 0.7418333333333333,
+          "mae": 0.3638546573901406,
+          "rmse": 0.42432392335793295,
+          "roc_auc": 0.7590845801065833
+        },
+        "hotpot_qa": {
+          "rows": 12006,
+          "positive_rate_at_threshold": 0.26553389971680824,
+          "threshold_accuracy": 0.7244710977844411,
+          "mae": 0.36589918066597527,
+          "rmse": 0.422418120751312,
+          "roc_auc": 0.705240763090667
+        },
+        "math": {
+          "rows": 12000,
+          "positive_rate_at_threshold": 0.5825833333333333,
+          "threshold_accuracy": 0.7340833333333333,
+          "mae": 0.38424413963402365,
+          "rmse": 0.4285586243114592,
+          "roc_auc": 0.7916021223305703
+        },
+        "mbpp": {
+          "rows": 5400,
+          "positive_rate_at_threshold": 0.7261111111111112,
+          "threshold_accuracy": 0.7188888888888889,
+          "mae": 0.37224686183674166,
+          "rmse": 0.4179000085394221,
+          "roc_auc": 0.7022120793721986
+        },
+        "mmlu": {
+          "rows": 84000,
+          "positive_rate_at_threshold": 0.6325714285714286,
+          "threshold_accuracy": 0.7773214285714286,
+          "mae": 0.3159778108212652,
+          "rmse": 0.3929634673859158,
+          "roc_auc": 0.8264470124316112
+        },
+        "squad": {
+          "rows": 12000,
+          "positive_rate_at_threshold": 0.6405833333333333,
+          "threshold_accuracy": 0.7389166666666667,
+          "mae": 0.2793276028142262,
+          "rmse": 0.3351152026377811,
+          "roc_auc": 0.7355905078329691
+        }
+      },
+      "routing_overall": {
+        "prompts": 10467.0,
+        "mean_selected_label": 0.8217007910816869,
+        "success_at_threshold": 0.823540651571606,
+        "oracle_mean_label": 0.9525677416559913,
+        "oracle_success_at_threshold": 0.9540460494888697,
+        "random_expected_label": 0.6108634978445371,
+        "mean_candidate_models": 20.000573230151907
+      },
+      "routing_by_task": {
+        "aclue": {
+          "prompts": 600.0,
+          "mean_selected_label": 0.6833333333333333,
+          "success_at_threshold": 0.6833333333333333,
+          "oracle_mean_label": 0.9566666666666667,
+          "oracle_success_at_threshold": 0.9566666666666667,
+          "random_expected_label": 0.4890833333333334,
+          "mean_candidate_models": 20.0
+        },
+        "arc_c": {
+          "prompts": 599.0,
+          "mean_selected_label": 0.9432387312186978,
+          "success_at_threshold": 0.9432387312186978,
+          "oracle_mean_label": 0.994991652754591,
+          "oracle_success_at_threshold": 0.994991652754591,
+          "random_expected_label": 0.7717028380634391,
+          "mean_candidate_models": 20.0
+        },
+        "cmmlu": {
+          "prompts": 3000.0,
+          "mean_selected_label": 0.8493333333333334,
+          "success_at_threshold": 0.8493333333333334,
+          "oracle_mean_label": 0.9776666666666667,
+          "oracle_success_at_threshold": 0.9776666666666667,
+          "random_expected_label": 0.6283666666666666,
+          "mean_candidate_models": 20.0
+        },
+        "hotpot_qa": {
+          "prompts": 600.0,
+          "mean_selected_label": 0.43833333333333335,
+          "success_at_threshold": 0.43833333333333335,
+          "oracle_mean_label": 0.5966666666666667,
+          "oracle_success_at_threshold": 0.5966666666666667,
+          "random_expected_label": 0.265515873015873,
+          "mean_candidate_models": 20.01
+        },
+        "math": {
+          "prompts": 600.0,
+          "mean_selected_label": 0.8266666666666667,
+          "success_at_threshold": 0.8266666666666667,
+          "oracle_mean_label": 0.9666666666666667,
+          "oracle_success_at_threshold": 0.9666666666666667,
+          "random_expected_label": 0.5825833333333333,
+          "mean_candidate_models": 20.0
+        },
+        "mbpp": {
+          "prompts": 270.0,
+          "mean_selected_label": 0.8703703703703703,
+          "success_at_threshold": 0.8703703703703703,
+          "oracle_mean_label": 0.9567901234567903,
+          "oracle_success_at_threshold": 0.9555555555555556,
+          "random_expected_label": 0.7269753086419753,
+          "mean_candidate_models": 20.0
+        },
+        "mmlu": {
+          "prompts": 4198.0,
+          "mean_selected_label": 0.8508813720819438,
+          "success_at_threshold": 0.8508813720819438,
+          "oracle_mean_label": 0.9754645069080514,
+          "oracle_success_at_threshold": 0.9754645069080514,
+          "random_expected_label": 0.6326226774654597,
+          "mean_candidate_models": 20.0
+        },
+        "squad": {
+          "prompts": 600.0,
+          "mean_selected_label": 0.8529036337533611,
+          "success_at_threshold": 0.885,
+          "oracle_mean_label": 0.9603220309665463,
+          "oracle_success_at_threshold": 0.9866666666666667,
+          "random_expected_label": 0.6536922913265215,
+          "mean_candidate_models": 20.0
+        }
+      }
+    },
+    "test2": {
+      "row_metrics": {
+        "rows": 63200,
+        "positive_rate_at_threshold": 0.6718670886075949,
+        "threshold_accuracy": 0.7571044303797468,
+        "mae": 0.35391687292516383,
+        "rmse": 0.4206516547757642,
+        "roc_auc": 0.7585468344915445,
+        "bce": 0.5381530838978441
+      },
+      "row_metrics_by_task": {
+        "ceval": {
+          "rows": 20000,
+          "positive_rate_at_threshold": 0.6099,
+          "threshold_accuracy": 0.73045,
+          "mae": 0.3708702261334641,
+          "rmse": 0.42962251711374394,
+          "roc_auc": 0.7572821663100582
+        },
+        "commonsense_qa": {
+          "rows": 20000,
+          "positive_rate_at_threshold": 0.68545,
+          "threshold_accuracy": 0.8099,
+          "mae": 0.2857894056169962,
+          "rmse": 0.37800810112902694,
+          "roc_auc": 0.7861817504959427
+        },
+        "gsm8k": {
+          "rows": 20000,
+          "positive_rate_at_threshold": 0.70505,
+          "threshold_accuracy": 0.7324,
+          "mae": 0.40129232121836367,
+          "rmse": 0.4508550793862203,
+          "roc_auc": 0.7383803577030115
+        },
+        "humaneval": {
+          "rows": 3200,
+          "positive_rate_at_threshold": 0.766875,
+          "threshold_accuracy": 0.748125,
+          "mae": 0.3776585342168353,
+          "rmse": 0.421449581834703,
+          "roc_auc": 0.7334258670529705
+        }
+      },
+      "routing_overall": {
+        "prompts": 3159.0,
+        "mean_selected_label": 0.8660968660968661,
+        "success_at_threshold": 0.8660968660968661,
+        "oracle_mean_label": 0.9832225387780943,
+        "oracle_success_at_threshold": 0.9832225387780943,
+        "random_expected_label": 0.6719531497309275,
+        "mean_candidate_models": 20.0
+      },
+      "routing_by_task": {
+        "ceval": {
+          "prompts": 999.0,
+          "mean_selected_label": 0.8318318318318318,
+          "success_at_threshold": 0.8318318318318318,
+          "oracle_mean_label": 0.97997997997998,
+          "oracle_success_at_threshold": 0.97997997997998,
+          "random_expected_label": 0.6101101101101101,
+          "mean_candidate_models": 20.0
+        },
+        "commonsense_qa": {
+          "prompts": 1000.0,
+          "mean_selected_label": 0.858,
+          "success_at_threshold": 0.858,
+          "oracle_mean_label": 0.983,
+          "oracle_success_at_threshold": 0.983,
+          "random_expected_label": 0.68545,
+          "mean_candidate_models": 20.0
+        },
+        "gsm8k": {
+          "prompts": 1000.0,
+          "mean_selected_label": 0.9,
+          "success_at_threshold": 0.9,
+          "oracle_mean_label": 0.986,
+          "oracle_success_at_threshold": 0.986,
+          "random_expected_label": 0.70505,
+          "mean_candidate_models": 20.0
+        },
+        "humaneval": {
+          "prompts": 160.0,
+          "mean_selected_label": 0.91875,
+          "success_at_threshold": 0.91875,
+          "oracle_mean_label": 0.9875,
+          "oracle_success_at_threshold": 0.9875,
+          "random_expected_label": 0.766875,
+          "mean_candidate_models": 20.0
+        }
+      }
+    }
+  }
+}

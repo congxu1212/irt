@@ -1,8 +1,8 @@
-# src/train_and_eval.py
+import os
+os.environ.setdefault("PYTORCH_ENABLE_MPS_FALLBACK", "1")
 
 import torch
 import pandas as pd
-import os
 import argparse
 from torch import nn
 from torch.optim import Adam
@@ -276,7 +276,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     # ... (the rest of the __main__ block remains the same) ...
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+    elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+        device = torch.device("mps")
+    else:
+        device = torch.device("cpu")
     print(f"device: {device}")
 
     if args.eval_only:

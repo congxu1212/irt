@@ -1,0 +1,22 @@
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.pyc
+
+# Local datasets and generated embeddings/checkpoints.
+IRTNet/data/train.csv
+IRTNet/data/val.csv
+IRTNet/data/test.csv
+IRTNet/data/question_order.csv
+IRTNet/data/question_embeddings.pth
+IRTNet/models/
+
+# Large generated evaluation artifacts.
+IRTNet/outputs/irtrouter_pipeline/best_irt_router.pt
+IRTNet/outputs/irtrouter_pipeline/predictions_*.csv
+IRTNet/outputs/irtrouter_pipeline/prepared/
+IRTNet/reports/pipeline.log
+IRTNet/reports/router_eval/**/mirt_*.pth
+IRTNet/reports/router_eval/**/nirt_*.pth
+IRTNet/reports/router_eval/**/*_test_predictions.csv
+IRTNet/reports/router_eval/**/*_selected_routes.csv
