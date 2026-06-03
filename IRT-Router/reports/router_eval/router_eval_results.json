@@ -1,0 +1,95 @@
+{
+  "started_at": "2026-06-03T14:58:01",
+  "device": "mps",
+  "embedding": "bert",
+  "train_rows": 488600,
+  "tests": {
+    "test1": 209406,
+    "test2": 63200
+  },
+  "routers": {
+    "mirt": {
+      "snapshot": "reports/router_eval/mirt_bert_retrained.snapshot",
+      "tests": {
+        "test1": {
+          "prediction": {
+            "rmse": 0.4018034594265379,
+            "mae": 0.3302648365497589,
+            "auc": 0.811485176652194,
+            "accuracy": 0.7590374678853519
+          },
+          "routing": {
+            "questions_evaluated": 10467,
+            "questions_skipped": 0,
+            "avg_candidate_count": 20.0,
+            "avg_performance": 0.8072458900263251,
+            "total_cost": 0.4151146733333334,
+            "avg_cost": 3.965937454221204e-05,
+            "a": 0.8,
+            "lamda": 0.3
+          }
+        },
+        "test2": {
+          "prediction": {
+            "rmse": 0.44062114199849967,
+            "mae": 0.36472463607788086,
+            "auc": 0.7360433288467749,
+            "accuracy": 0.727373417721519
+          },
+          "routing": {
+            "questions_evaluated": 3159,
+            "questions_skipped": 0,
+            "avg_candidate_count": 20.0,
+            "avg_performance": 0.8698955365622032,
+            "total_cost": 0.13807289166666664,
+            "avg_cost": 4.370778463648833e-05,
+            "a": 0.8,
+            "lamda": 0.3
+          }
+        }
+      }
+    },
+    "nirt": {
+      "snapshot": "reports/router_eval/nirt_bert_retrained.snapshot",
+      "tests": {
+        "test1": {
+          "prediction": {
+            "rmse": 0.4015457795517574,
+            "mae": 0.31740689277648926,
+            "auc": 0.8157281827515508,
+            "accuracy": 0.7590231416482813
+          },
+          "routing": {
+            "questions_evaluated": 10467,
+            "questions_skipped": 0,
+            "avg_candidate_count": 20.0,
+            "avg_performance": 0.8069385514256897,
+            "total_cost": 0.4458985133333333,
+            "avg_cost": 4.2600412088786975e-05,
+            "a": 0.8,
+            "lamda": 0.3
+          }
+        },
+        "test2": {
+          "prediction": {
+            "rmse": 0.4126357924313335,
+            "mae": 0.3252634108066559,
+            "auc": 0.7657500845388918,
+            "accuracy": 0.7634968354430379
+          },
+          "routing": {
+            "questions_evaluated": 3159,
+            "questions_skipped": 0,
+            "avg_candidate_count": 20.0,
+            "avg_performance": 0.8673630895853118,
+            "total_cost": 0.14639703333333332,
+            "avg_cost": 4.6342840561359074e-05,
+            "a": 0.8,
+            "lamda": 0.3
+          }
+        }
+      }
+    }
+  },
+  "finished_at": "2026-06-03T15:01:08"
+}

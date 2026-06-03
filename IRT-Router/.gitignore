@@ -1,0 +1,8 @@
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.pyc
+
+# Large local data and embedding artifacts exceed normal GitHub file limits.
+data/*.csv
+utils/**/*.pkl
